@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Germalingo Radio</title>
+<meta name="description" content="Germalingo Radio: Bansuri, Dotara und Tabla rund um die Uhr. Ein bengalisches Dorf, das mit dem echten Tageslicht vom Morgen bis in die Nacht wandert.">
+<meta name="theme-color" content="#0d0b14">
+<link rel="icon" href="icon-192.png">
+<link rel="apple-touch-icon" href="icon-192.png">
+<link rel="manifest" href="manifest.webmanifest">
+<meta property="og:title" content="Germalingo Radio">
+<meta property="og:description" content="Bansuri, Dotara und Tabla rund um die Uhr, in einem Dorf, das mit dem echten Tageslicht lebt.">
+<meta property="og:image" content="https://radio.germalingo.com/og.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preload" href="playlist.json" as="fetch" crossorigin>
+<link rel="stylesheet" href="style.css">
+</head>
+<body class="idle">
+<div id="world" aria-hidden="true">
+  <div id="cam"><div id="kb">
+    <canvas id="scene"></canvas>
+    <canvas id="fx"></canvas>
+  </div></div>
+  <canvas id="life"></canvas>
+  <div class="shade"></div>
+</div>
+
+<header class="top">
+  <a class="brand" href="./" aria-label="Germalingo Radio">
+    <span class="mark"><svg viewBox="0 0 32 32" aria-hidden="true"><circle cx="16" cy="19" r="3.2" fill="currentColor"/><path d="M10.2 13.6a8.2 8.2 0 0 1 11.6 0M6.4 9.8a13.6 13.6 0 0 1 19.2 0" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/><path d="M16 22.5v5" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/></svg></span>
+    <span class="bt"><b>Germalingo</b><small>Radio</small></span>
+  </a>
+  <button class="chip glass" id="phase" aria-haspopup="dialog" aria-expanded="false">
+    <span class="pic" id="phIcon"></span>
+    <span class="pt"><b id="phBn"></b><small id="phTr"></small></span>
+    <span class="clock" id="phClock"></span>
+  </button>
+  <div class="lang glass" role="group" aria-label="Sprache / Language"><button data-l="de">DE</button><button data-l="en">EN</button></div>
+</header>
+
+<div class="dial glass" id="dial" role="dialog" aria-label="Tageslicht" hidden>
+  <div class="dh"><div><b id="dPh"></b><small id="dPlace"></small></div><span class="dt" id="dTime"></span></div>
+  <div class="dbar" id="dbar"><canvas id="dcv"></canvas><i class="dsun" id="dsun"></i><span class="dmark" id="dRise"></span><span class="dmark" id="dSet"></span></div>
+  <div class="dfoot"><small id="dNote"></small><button class="pillb" id="dLive"></button></div>
+</div>
+
+<main class="hero" id="hero">
+  <div class="onair"><span class="dot"></span><span id="air"></span><span class="eq" aria-hidden="true"><i></i><i></i><i></i><i></i></span></div>
+  <h1 id="t1">Germalingo Radio</h1>
+  <h2 id="t2"></h2>
+  <p class="meta" id="meta"></p>
+  <p class="msg" id="msg" role="status"></p>
+</main>
+
+<section class="dock glass" aria-label="Player">
+  <div class="prog" id="prog" role="slider" aria-label="Position" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0"><b id="bar"></b></div>
+  <div class="now">
+    <span class="cov" id="cov"></span>
+    <span class="nt"><b id="n1">Germalingo Radio</b><small id="n2"></small></span>
+  </div>
+  <div class="ctl">
+    <button class="pp" id="pp" aria-label="Play"></button>
+    <button class="ib" id="nx" aria-label="Next"><svg viewBox="0 0 24 24"><path d="M6 5.5l9 6.5-9 6.5z" fill="currentColor"/><rect x="16.2" y="5.5" width="2.5" height="13" rx="1" fill="currentColor"/></svg></button>
+  </div>
+  <div class="rt">
+    <span class="times"><span id="tc">0:00</span> / <span id="td">0:00</span></span>
+    <label class="vol"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 9h4l5-4v14l-5-4H4z" fill="currentColor"/><path d="M16 8.5a5 5 0 0 1 0 7" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg><input type="range" id="vol" min="0" max="100" value="80" aria-label="Volume"></label>
+    <button class="ib" id="lst" aria-label="Tracks" aria-expanded="false"><svg viewBox="0 0 24 24"><path d="M4 6.5h11M4 12h11M4 17.5h7" stroke="currentColor" stroke-width="2" stroke-linecap="round"/><path d="M17.5 14.5v-8l3.5 1" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="16" cy="16.5" r="2.4" fill="currentColor"/></svg></button>
+  </div>
+</section>
+
+<aside class="sheet glass" id="sheet" aria-label="Tracks" hidden>
+  <div class="sh"><b id="hList"></b><button class="ib x" id="shx" aria-label="close"><svg viewBox="0 0 24 24"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="2.2" stroke-linecap="round"/></svg></button></div>
+  <div class="list" id="list"></div>
+  <a class="car" href="https://drive.germalingo.com" target="_blank" rel="noopener">
+    <svg viewBox="0 0 64 64" aria-hidden="true"><rect width="64" height="64" rx="16" fill="#1565c0"/><path d="M14 38l5-11a5 5 0 0 1 4.6-3h16.8a5 5 0 0 1 4.6 3l5 11v9a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2v-2H21v2a2 2 0 0 1-2 2h-3a2 2 0 0 1-2-2z" fill="#fff"/><circle cx="21" cy="39" r="3" fill="#1565c0"/><circle cx="43" cy="39" r="3" fill="#1565c0"/><path d="M20 33l3.5-7h17l3.5 7z" fill="#9ec5f8"/></svg>
+    <span><b>GermaDrive</b><small id="carTxt"></small></span>
+  </a>
+</aside>
+
+<footer class="foot">
+  <span class="flag" aria-hidden="true"><i></i><i></i><i></i></span>
+  <b>Germalingo Radio</b> · <a href="https://germalingo.com" target="_blank" rel="noopener">germalingo.com</a> · <a href="#" id="fAbout"></a> · <a href="#" id="fContact"></a>
+</footer>
+
+<script src="app.js"></script>
+</body>
+</html>

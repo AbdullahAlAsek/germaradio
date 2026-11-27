@@ -1,0 +1,187 @@
+{
+ "name": "Germalingo Radio",
+ "talkEvery": 3,
+ "items": [
+  {
+   "type": "song",
+   "id": "bhorer-bansi",
+   "file": "tracks/bhorer-bansi.mp3",
+   "title": {
+    "bn": "ভোরের বাঁশি",
+    "en": "Morning Flute",
+    "de": "Morgenflöte"
+   },
+   "artist": "Germalingo",
+   "style": {
+    "de": "Raga Bhupali",
+    "en": "Raga Bhupali"
+   },
+   "instruments": {
+    "de": "Bansuri, Tanpura, Tabla",
+    "en": "Bansuri, Tanpura, Tabla"
+   },
+   "dur": 163.7,
+   "cover": "bhorer-bansi"
+  },
+  {
+   "type": "song",
+   "id": "nodir-mon",
+   "file": "tracks/nodir-mon.mp3",
+   "title": {
+    "bn": "নদীর মন",
+    "en": "The River's Heart",
+    "de": "Das Herz des Flusses"
+   },
+   "artist": "Germalingo",
+   "style": {
+    "de": "Bhatiyali, Raga Khamaj",
+    "en": "Bhatiyali, Raga Khamaj"
+   },
+   "instruments": {
+    "de": "Bansuri, Dotara, Tanpura, Fluss",
+    "en": "Bansuri, Dotara, Tanpura, River"
+   },
+   "dur": 170.4,
+   "cover": "nodir-mon"
+  },
+  {
+   "type": "song",
+   "id": "baul-pother-gaan",
+   "file": "tracks/baul-pother-gaan.mp3",
+   "title": {
+    "bn": "বাউল পথের গান",
+    "en": "Song of the Baul Road",
+    "de": "Lied der Baul-Straße"
+   },
+   "artist": "Germalingo",
+   "style": {
+    "de": "Baul, Raga Khamaj",
+    "en": "Baul, Raga Khamaj"
+   },
+   "instruments": {
+    "de": "Dotara, Ektara, Bansuri, Khol, Kartal",
+    "en": "Dotara, Ektara, Bansuri, Khol, Kartal"
+   },
+   "dur": 160.5,
+   "cover": "baul-pother-gaan"
+  },
+  {
+   "type": "song",
+   "id": "shondhatara",
+   "file": "tracks/shondhatara.mp3",
+   "title": {
+    "bn": "সন্ধ্যাতারা",
+    "en": "Evening Star",
+    "de": "Abendstern"
+   },
+   "artist": "Germalingo",
+   "style": {
+    "de": "Raga Yaman",
+    "en": "Raga Yaman"
+   },
+   "instruments": {
+    "de": "Bansuri, Tanpura, Tabla",
+    "en": "Bansuri, Tanpura, Tabla"
+   },
+   "dur": 168.0,
+   "cover": "shondhatara"
+  },
+  {
+   "type": "song",
+   "id": "brishtir-dupur",
+   "file": "tracks/brishtir-dupur.mp3",
+   "title": {
+    "bn": "বৃষ্টির দুপুর",
+    "en": "Rainy Afternoon",
+    "de": "Regennachmittag"
+   },
+   "artist": "Germalingo",
+   "style": {
+    "de": "Raga Megh",
+    "en": "Raga Megh"
+   },
+   "instruments": {
+    "de": "Bansuri, Dotara, Khol, Regen",
+    "en": "Bansuri, Dotara, Khol, Rain"
+   },
+   "dur": 168.5,
+   "cover": "brishtir-dupur",
+   "scene": "rain"
+  },
+  {
+   "type": "song",
+   "id": "haater-pothe",
+   "file": "tracks/haater-pothe.mp3",
+   "title": {
+    "bn": "হাটের পথে",
+    "en": "On the Way to the Market",
+    "de": "Auf dem Weg zum Markt"
+   },
+   "artist": "Germalingo",
+   "style": {
+    "de": "Volksweise, Bilawal",
+    "en": "Folk tune, Bilawal"
+   },
+   "instruments": {
+    "de": "Dotara, Bansuri, Dhol, Kartal",
+    "en": "Dotara, Bansuri, Dhol, Kartal"
+   },
+   "dur": 134.5,
+   "cover": "haater-pothe"
+  },
+  {
+   "type": "song",
+   "id": "jonakir-ghum",
+   "file": "tracks/jonakir-ghum.mp3",
+   "title": {
+    "bn": "জোনাকির ঘুম",
+    "en": "Fireflies' Lullaby",
+    "de": "Schlaflied der Glühwürmchen"
+   },
+   "artist": "Germalingo",
+   "style": {
+    "de": "Raga Bhairavi",
+    "en": "Raga Bhairavi"
+   },
+   "instruments": {
+    "de": "Bansuri, Dotara, Grillen",
+    "en": "Bansuri, Dotara, Crickets"
+   },
+   "dur": 142.9,
+   "cover": "jonakir-ghum",
+   "scene": "fireflies"
+  },
+  {
+   "type": "song",
+   "id": "melar-din",
+   "file": "tracks/melar-din.mp3",
+   "title": {
+    "bn": "মেলার দিন",
+    "en": "Fair Day",
+    "de": "Jahrmarktstag"
+   },
+   "artist": "Germalingo",
+   "style": {
+    "de": "Volksweise, Khamaj",
+    "en": "Folk tune, Khamaj"
+   },
+   "instruments": {
+    "de": "Bansuri, Dotara, Dhol, Khol, Kartal",
+    "en": "Bansuri, Dotara, Dhol, Khol, Kartal"
+   },
+   "dur": 143.6,
+   "cover": "melar-din"
+  },
+  {
+   "type": "talk",
+   "id": "ident",
+   "file": "tracks/germalingo-ident.mp3",
+   "title": {
+    "de": "Germalingo Radio",
+    "en": "Germalingo Radio"
+   },
+   "dur": 6.6,
+   "cover": "talk"
+  }
+ ]
+}
